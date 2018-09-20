@@ -15,4 +15,4 @@ Rate-distortion curves of the proposed method and competitive methods. The top p
 
 ![RD-MS-SSIM](./figures/RD_MSSSIM.png)
 
-the compression gains in terms of BD-rate of PSNR over JPEG2000, [Balle'18(MSE-optimized)](https://arxiv.org/abs/1802.01436), BPG are 34.08\%, 11.87\%, 6.85\%, respectively. In case of MS-SSIM, we found the wider gaps of 68.82\%, 13.93\%, 49.68\%, respectively.
+the compression gains in terms of BD-rate of PSNR over [JPEG2000](http://www.openjpeg.org/), [Balle'18(MSE-optimized)](https://arxiv.org/abs/1802.01436), [BPG](https://bellard.org/bpg/) are 34.08\%, 11.87\%, 6.85\%, respectively. In case of MS-SSIM, we found the wider gaps of 68.82\%, 13.93\%, 49.68\%, respectively.
