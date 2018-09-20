@@ -4,11 +4,13 @@ Repository of the paper "Context-adaptive Entropy Model for End-to-end Optimized
 ## Introduction
 This repository includes the evaluation results and the reconstructed images of our paper "Context-adaptive Entropy Model for End-to-end Optimized Image Compression"(). Please refer to our paper() for the detailed information.
 
-## Evaluation results
-Rate-distortion curves of the proposed method and competitive methods. The top plot represents PSNR values in consequence of bpp changes, while the bottom plot shows MS-SSIM values in the same manner. MS-SSIM values are converted to decibels for differentiating the quality levels. Note we trained our model with two different types of distortion terms, MSE and MS-SSIM, and each of those two models outperforms all the other methods including [BPG](https://bellard.org/bpg/) for its target metric.
-
+## Reconstructed samples
 ![Samples](./figures/samplecomparison.png)
 
+## Evaluation results
+We optimized the networks with the two different types of distortion terms, one with MSE and the other with MS-SSIM. For each distortion type, the average bits per pixel (BPP) and the distortion, PSNR or MS-SSIM, over 24 PNG images of the [Kodak PhotoCD image dataset](http://r0k.us/graphics/kodak/) are measured for each of the nine R-D configurations. Therefore, a total of 18 networks are trained and evaluated. Each of those two models outperforms all the other methods including [BPG](https://bellard.org/bpg/) for its target metric.
+
+Followings are the rate-distortion curves of the proposed method and competitive methods. The top plot represents PSNR values in consequence of bpp changes, while the bottom plot shows MS-SSIM values in the same manner. MS-SSIM values are converted to decibels for differentiating the quality levels. 
 
 ![RD-PSNR](./figures/RD_PSNR.png)
 
