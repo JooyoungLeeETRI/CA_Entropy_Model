@@ -7,8 +7,12 @@ This repository includes the evaluation results and the reconstructed images of 
 ## Evaluation results
 Rate-distortion curves of the proposed method and competitive methods. The top plot represents PSNR values in consequence of bpp changes, while the bottom plot shows MS-SSIM values in the same manner. MS-SSIM values are converted to decibels for differentiating the quality levels. Note we trained our model with two different types of distortion terms, MSE and MS-SSIM, and each of those two models outperforms all the other methods including [BPG](https://bellard.org/bpg/) for its target metric.
 
-![Samples](CA_Entropy_Model_/figures/samplecomparison.png)
-![RD-PSNR](CA_Entropy_Model_/figures/RD_PSNR.png)
-![RD-MS-SSIM](CA_Entropy_Model_/figures/RD_MSSSIM.png)
+![Samples](./figures/samplecomparison.png)
+
+
+![RD-PSNR](./figures/RD_PSNR.png)
+
+
+![RD-MS-SSIM](./figures/RD_MSSSIM.png)
 
 the compression gains in terms of BD-rate of PSNR over JPEG2000, [Balle'18(MSE-optimized)](https://arxiv.org/abs/1802.01436), BPG are 34.08\%, 11.87\%, 6.85\%, respectively. In case of MS-SSIM, we found the wider gaps of 68.82\%, 13.93\%, 49.68\%, respectively.
