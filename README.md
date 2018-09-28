@@ -2,7 +2,7 @@
 Repository of the paper "Context-adaptive Entropy Model for End-to-end Optimized Image Compression"
 
 ## Introduction
-This repository includes the [evaluation results](https://github.com/JooyoungLeeETRI/CA_Entropy_Model/tree/master/Evaluation%20Results) and the [reconstructed images](https://github.com/JooyoungLeeETRI/CA_Entropy_Model/tree/master/Reconstructed%20images) of our paper "Context-adaptive Entropy Model for End-to-end Optimized Image Compression"(). Please refer to our paper() for the detailed information.
+This repository includes the [evaluation results](https://github.com/JooyoungLeeETRI/CA_Entropy_Model/tree/master/Evaluation%20Results) and the [reconstructed images](https://github.com/JooyoungLeeETRI/CA_Entropy_Model/tree/master/Reconstructed%20images) of our paper ["Context-adaptive Entropy Model for End-to-end Optimized Image Compression"](http://arxiv.org/abs/1809.10452). Please refer to [the paper](http://arxiv.org/abs/1809.10452) for the detailed information.
 
 ## Reconstructed samples
 ![Samples](./figures/samplecomparison.png)
