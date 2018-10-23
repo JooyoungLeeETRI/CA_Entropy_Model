@@ -74,9 +74,6 @@ class Tester_hybridmodel(object):
         return np.multiply(padded_y_hat[:, :, h_idx:h_idx + 4, w_idx:w_idx + 4], mask)
 
 
-
-
-
     def encode(self, model_type, input_path, compressed_file_path, quality_level):  # with TOP N dimensions
 
         img = Image.open(input_path)
@@ -150,13 +147,8 @@ class Tester_hybridmodel(object):
         for h_idx in range(y_hat.shape[2]):
             printProgressBar(h_idx + 1, y_hat.shape[2], prefix='Encoding y_hat:', suffix='Complete', length=50)
             for w_idx in range(y_hat.shape[3]):
-                mask = [[1, 1, 1, 1],
-                        [1, 1, 1, 1],
-                        [1, 1, 1, 1],
-                        [1, 1, 0, 0]]
-
-                c_prime_i = padded_c_prime[:, :, h_idx:h_idx + 4, w_idx:w_idx + 4]
-                c_doubleprime_i = np.multiply(padded_y1_hat[:, :, h_idx:h_idx + 4, w_idx:w_idx + 4], mask)
+                c_prime_i = self.extractor_prime(padded_c_prime, h_idx, w_idx)
+                c_doubleprime_i = self.extractor_doubleprime(padded_y1_hat, h_idx, w_idx)
                 concatenated_c_i = np.concatenate([c_doubleprime_i, c_prime_i], axis=1)
 
                 pred_mean, pred_sigma = self.sess.run([self.pred_mean, self.pred_sigma],
@@ -250,8 +242,8 @@ class Tester_hybridmodel(object):
         for h_idx in range(y_hat.shape[2]):
             printProgressBar(h_idx + 1, y_hat.shape[2], prefix='Decoding y_hat:', suffix='Complete', length=50)
             for w_idx in range(y_hat.shape[3]):
-                c_prime_i = padded_c_prime[:, :, h_idx:h_idx + 4, w_idx:w_idx + 4]
-                c_doubleprime_i = padded_y1_hat[:, :, h_idx:h_idx + 4, w_idx:w_idx + 4]
+                c_prime_i = self.extractor_prime(padded_c_prime, h_idx, w_idx)
+                c_doubleprime_i = self.extractor_doubleprime(padded_y1_hat, h_idx, w_idx)
                 concatenated_c_i = np.concatenate([c_doubleprime_i, c_prime_i], axis=1)
 
                 pred_mean, pred_sigma = self.sess.run([self.pred_mean, self.pred_sigma],

@@ -26,7 +26,7 @@ def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, 
 def downloadModels():
     if not exists('./models'):
         makedirs('./models')
-        gdd.download_file_from_google_drive(file_id='1zNnIGJjTqwdFWJ3sT4tMfRNvcbLz7AEK',
+        gdd.download_file_from_google_drive(file_id='1NqIYWOJP4o_JbUl2n2SdxezZNVdpBw5c',
                                             dest_path='./models/models.zip',
                                             unzip=True)
         remove("./models/models.zip")
