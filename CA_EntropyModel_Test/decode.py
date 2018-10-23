@@ -1,6 +1,7 @@
 import sys
 import numpy as np
 from tester_basemodel import Tester_basemodel
+from tester_hybridmodel import Tester_hybridmodel
 from argparse import ArgumentParser
 from utils import downloadModels
 
@@ -19,20 +20,18 @@ def main(compressed_file_path, recon_path):
     if model_type == 0:
         if quality_level <= 5:
             model_dir = './models/MSEopt/Base_model/' + str(quality_level)
+            trainer = Tester_basemodel(model_dir)
         else:
-            print("Hybrid models will be uploaded soon")
-            sys.exit(1)
-            # model_dir = model_dir + '/MSEopt/Hybrid_model/' + str(quality_grade)
+            model_dir = './models/MSEopt/Hybrid_model/' + str(quality_level)
+            trainer = Tester_hybridmodel(model_dir, model_type, quality_level)
     elif model_type == 1:
         if quality_level <= 5:
             model_dir =  './models/MSSSIMopt/Base_model/' + str(quality_level)
+            trainer = Tester_basemodel(model_dir)
         else:
-            print("Hybrid models will be uploaded soon")
-            sys.exit(1)
-            # model_dir = model_dir + '/MSSSIMopt/Hybrid_model/' + str(quality_grade)
+            model_dir = './models/MSSSIMopt/Hybrid_model/' + str(quality_level)
+            trainer = Tester_hybridmodel(model_dir, model_type, quality_level)
 
-
-    trainer = Tester_basemodel(model_dir)
     print("Reconstructing.. (Input: {}, Output: {}, Quality level: {})".format(compressed_file_path, recon_path,
                                                                             quality_level))
     trainer.decode(compressed_file_path, recon_path)
