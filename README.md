@@ -58,7 +58,7 @@ python decode.py --compressed_file_path ./examples/output.cmp --recon_path ./exa
 
 
 ## Notes
-* When you first excute test codes, it may take a few minutes to download models. Please be patient.
+* When you excute test codes for the first time, it may take a few minutes to download models. Please be patient.
 * When HDF5 version error occurs during tests, please try to install HDF5 1.10.1. When you use anaconda environment, you can install it using the following command:
 conda install -c anaconda hdf5=1.10.1
 * Currently test codes spend most of time for arithmetic coding and decoding. We implemented the arithmetic coder that operates with the model parameter such as mu and sigma, based on [Nayuki's work](https://github.com/nayuki/Reference-arithmetic-coding). We really appreciate for her great effort. Note that, however, current the model-based arithmetic coder is not fully optimized. If anybody has any idea on it, please let us know.
