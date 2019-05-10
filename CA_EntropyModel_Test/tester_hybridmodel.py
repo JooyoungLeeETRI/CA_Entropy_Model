@@ -91,8 +91,8 @@ class Tester_hybridmodel(object):
         arr.tofile(fileobj)
         fileobj.close()
 
-        new_w = int(math.ceil(w / 16) * 16)
-        new_h = int(math.ceil(h / 16) * 16)
+        new_w = int(math.ceil(w / 64) * 64)
+        new_h = int(math.ceil(h / 64) * 64)
 
         pad_w = new_w - w
         pad_h = new_h - h
@@ -189,8 +189,8 @@ class Tester_hybridmodel(object):
         h = int(arr[1])
 
 
-        padded_w = int(math.ceil(w / 16) * 16)
-        padded_h = int(math.ceil(h / 16) * 16)
+        padded_w = int(math.ceil(w / 64) * 64)
+        padded_h = int(math.ceil(h / 64) * 64)
 
         y_hat, z_hat, sigma_z = self.sess.run([self.y_hat, self.z_hat, self.sigma_z],
                                               feed_dict={
