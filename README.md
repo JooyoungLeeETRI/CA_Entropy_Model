@@ -1,17 +1,3 @@
-<style>
-p.comment {
-background-color: #DBDBDB;
-padding: 10px;
-border: 1px solid black;
-margin-left: 25px;
-border-radius: 5px;
-font-style: italic;
-}
-</style>
-
-
-
-
 #  Context-adaptive Entropy Model for End-to-end Optimized Image Compression
 Repository of the paper ["Context-adaptive Entropy Model for End-to-end Optimized Image Compression"](http://arxiv.org/abs/1809.10452)
 
