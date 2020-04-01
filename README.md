@@ -2,12 +2,21 @@
 Repository of the paper ["Context-adaptive Entropy Model for End-to-end Optimized Image Compression"](http://arxiv.org/abs/1809.10452)
 
 ## Introduction
-This repository includes [evaluation results](https://github.com/JooyoungLeeETRI/CA_Entropy_Model/tree/master/Evaluation%20Results), [reconstructed images](https://github.com/JooyoungLeeETRI/CA_Entropy_Model/tree/master/Reconstructed%20images), and [test codes](./CA_EntropyModel_Test) of our paper ["Context-adaptive Entropy Model for End-to-end Optimized Image Compression"](http://arxiv.org/abs/1809.10452). Please refer to [the paper](http://arxiv.org/abs/1809.10452) for the detailed information.
+This repository includes [evaluation results](https://github.com/JooyoungLeeETRI/CA_Entropy_Model/tree/master/Evaluation%20Results), [reconstructed images](https://github.com/JooyoungLeeETRI/CA_Entropy_Model/tree/master/Reconstructed%20images), and [test codes](./CA_EntropyModel_Test) of our paper ["Context-adaptive Entropy Model for End-to-end Optimized Image Compression"](http://arxiv.org/abs/1809.10452). Please refer to [the paper](http://arxiv.org/abs/1809.10452) for the detailed information. If  [the paper](http://arxiv.org/abs/1809.10452) or this repository helps you, please cite our work as:
+~~~
+@InProceedings{Lee2019Context,
+    author = {Lee, Jooyoung and Cho, Seunghyun and Beack, Seung-Kwon},
+    title = {Context-adaptive Entropy Model for End-to-end Optimized Image Compression},
+    booktitle = {the 7th Int. Conf. on Learning Representations},
+    month = {May},
+    year = {2019}
+}
+~~~
 
 >**[Updated on Mar 31, 2020]**
 >We've uploaded [**the second version of our test codes**](./CA_EntropyModel_Test_v2). The second version uses **THE SAME MODELS** as for the first version. If you've already downloaded our models before, just copy them into the "models" directory under the working directory. 
-The followings are the new features of the updated test codes.
-
+>The followings are the new features of the updated test codes.
+>
 >* Now you can compress images of various sizes much more efficiently. By following the new padding method described in the supplemental material of [An End-to-End Joint Learning Scheme of Image Compression and Quality Enhancement with Improved Entropy Minimization](https://arxiv.org/abs/1912.12817), our second test codes minimize the unnecessary padding area. Now only up to 1 (vertical/horizontal) line is added to the input image. With the updated test codes, our model obtained apparently better reseults than that of BPG over various imagesets such as the SAMPLING test of Tecnick and the validation set of CLIC, as shown in the figures below:
 >
 >| ![Samples](./figures/CLIC_results.png) |
