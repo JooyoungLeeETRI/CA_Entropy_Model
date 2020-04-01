@@ -23,6 +23,7 @@ This repository includes [evaluation results](https://github.com/JooyoungLeeETRI
 The followings are the new features of the updated test codes.
 
 >* Now you can compress images of various sizes much more efficiently. By following the new padding method described in the supplemental material of [An End-to-End Joint Learning Scheme of Image Compression and Quality Enhancement with Improved Entropy Minimization](https://arxiv.org/abs/1912.12817), our second test codes minimize the unnecessary padding area. Now only up to 1 (vertical/horizontal) line is added to the input image. With the updated test codes, our model obtained apparently better reseults than that of BPG over various imagesets such as the SAMPLING test of Tecnick and the validation set of CLIC, as shown in the figures below:
+>
 >| ![Samples](./figures/CLIC_results.png) |
 >|:--:|
 >| *Test results over the CLIC validation set* |
