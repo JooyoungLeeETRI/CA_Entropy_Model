@@ -30,7 +30,7 @@ This repository includes [evaluation results](https://github.com/JooyoungLeeETRI
 >* We've fixed a few bugs due to the integer division that operates differently depending on the operating system.
 >* A list of files indicated by the wildcard character can be used as an input argument. However, some environments expand the asterisk to every matching file before passing the arguments. To deal with this issue, you can modify the source files([encode.py](./CA_EntropyModel_Test_v2/encode.py) and [decode.py](./CA_EntropyModel_Test_v2/decode.py)) for your own system.
 >* [**The new test codes**](./CA_EntropyModel_Test_v2) support parallel encoding/decoding of multiple files at the same time.
->* For more detailed instructions, please refer to [readme.text](./CA_EntropyModel_Test_v2/readme.txt) in [the second version of our test codes](./CA_EntropyModel_Test_v2)
+>* For more detailed instructions, please refer to [the second version of our test codes](./CA_EntropyModel_Test_v2)
 
 
 ## Reconstructed samples
